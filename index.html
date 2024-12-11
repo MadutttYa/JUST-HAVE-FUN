@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>WASPADA SOSOK KARBIT</title>
+  </head>
+  <body>
+    <h1>INI ADALAH SESOSOK KARBIT</h1>
+    <img src="./sikarbit.jpg" alt="KARBIT" />
+    <a href="./STUDI KASUS SOSOK KARBITAN.pdf" download="KARBIT"
+      >DOWNLOAD ARTIKEL PEMBUKTIAN</a
+    >
+    <h1>SEKALI LAGI KAMI HIMBAU UNTUK BERHATI-HATI!</h1>
+    <p>Dibuat oleh hater no 1</p>
+    <span class="material-symbols-outlined" id="toggle-musik"> music_off </span>
+    <audio id="my-audio" loop>
+      <source
+        src="./y2mate.com - Sway to My Beat in Cosmos.mp3"
+        type="audio/mp3" />
+    </audio>
+
+    <script>
+      const audio = document.getElementById("my-audio");
+      const toggleBtn = document.getElementById("toggle-musik");
+
+      window.addEventListener("load", () => {
+        audio.play().catch(() => {
+          console.log("Autoplay, blocked!");
+        });
+      });
+
+      toggleBtn.addEventListener("click", function () {
+        if (audio.paused) {
+          audio.play();
+          toggleBtn.textContent = "music_note";
+        } else {
+          audio.pause();
+          toggleBtn.textContent = "music_off";
+        }
+      });
+    </script>
+  </body>
+</html>
